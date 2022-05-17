@@ -3,38 +3,57 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .header-container,
 .footer-container{
     text-align: center;
+    display: flex;
+    flex: 1 1 0;
 }
 
 .header-container{
-    font-size: 3em;
+    font-size: 4em;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-container{
-    margin-top: auto;
     font-size: 1.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: auto;
+    align-items: flex-end;
+    gap: .125em;
+    margin-bottom: .75em;
 }
 
 .middle-container{
-    margin-top: auto;
-    margin-bottom: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    flex: 1 1 0;
 }
 
 .middle-left-container{
     display: flex;
     flex-direction: column;
     gap: 2em;
+    flex: 1;
+}
+
+.middle-right-container{
+    flex: 1;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 16px;
+    width: 150px;
 }
