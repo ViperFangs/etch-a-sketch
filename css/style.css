@@ -1,5 +1,40 @@
 body{
     margin: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container,
+.footer-container{
+    text-align: center;
+}
+
+.header-container{
+    font-size: 3em;
+}
+
+.footer-container{
+    margin-top: auto;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.middle-left-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
