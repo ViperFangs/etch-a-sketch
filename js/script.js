@@ -1,4 +1,6 @@
 const sketchBoxContainerDiv = document.createElement('div');
+const middleRightContainerDiv = document.querySelector('.middle-right-container');
+
 let sketchBoxRowContainer = document.createElement('div');
 let sketchBox = document.createElement('div');
 
@@ -33,5 +35,5 @@ for(let i = 0; i<amountOfBoxes; i++)
     sketchBoxContainerDiv.appendChild(sketchBoxRowContainer);
 }
 
-document.body.appendChild(sketchBoxContainerDiv);
+middleRightContainerDiv.appendChild(sketchBoxContainerDiv);
 
