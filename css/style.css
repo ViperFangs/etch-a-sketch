@@ -55,7 +55,8 @@ body{
 
 button{
     padding: 16px;
-    width: 150px;
+    min-width: 125px;
+    min-height: 60px;
 }
 
 .sketch-box-row-container{
