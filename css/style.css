@@ -57,3 +57,30 @@ button{
     padding: 16px;
     width: 150px;
 }
+
+.sketch-box-row-container{
+    display: flex; 
+    flex-direction:column; 
+    flex:1 1 0;
+}
+
+.sketch-box{
+    margin-right: 1px; 
+    margin-bottom: 1px; 
+    border: 0.1rem solid black; 
+    flex: 1 1 0;
+}
+
+#sketch-box-container-div{
+    display: flex; 
+    width:500px; 
+    height: 500px;
+}
+
+.sketch-box-hover{
+    background-color: black; 
+    margin-right: 1px; 
+    margin-bottom: 1px; 
+    border: 0.1rem solid black; 
+    flex:1 1 0;
+}
