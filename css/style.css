@@ -38,13 +38,29 @@ body{
 
 .middle-left-container{
     display: flex;
+    justify-content: space-evenly;
+    gap: 2em;
+    flex: 1;
+}
+
+.middle-left-right-container,
+.middle-left-left-container{
+    display: flex;
     flex-direction: column;
     gap: 2em;
     flex: 1;
 }
 
+.middle-left-left-container{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .middle-right-container{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-container{
@@ -84,4 +100,29 @@ button{
     margin-bottom: 1px; 
     border: 0.1rem solid black; 
     flex:1 1 0;
+}
+
+/*#color-picker{
+    border: none;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}*/
+
+input[type=color] {
+    display: inline;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+}
+span {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px; 
+  background-color:black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
