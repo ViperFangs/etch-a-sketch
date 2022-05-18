@@ -70,7 +70,6 @@ button{
 }
 
 .sketch-box{ 
-    border: 0.1rem solid black; 
     flex: 1 1 0;
 }
 
@@ -78,10 +77,18 @@ button{
     display: flex; 
     width: 38em; 
     height: 38em;
+    border: 0.1em black solid;
 }
 
 .sketch-box-hover{
-    background-color: black;  
-    border: 0.1rem solid black; 
+    background-color: black;   
     flex:1 1 0;
+}
+
+.slider-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

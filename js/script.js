@@ -1,5 +1,7 @@
 const sketchBoxContainerDiv = document.createElement('div');
 const middleBottomContainerDiv = document.querySelector('.middle-bottom-container');
+let gridSlider = document.getElementById('grid-slider');
+const gridOutput = document.getElementById('grid-slider-value');
 
 let sketchBoxRowContainer = document.createElement('div');
 let sketchBox = document.createElement('div');
@@ -12,22 +14,32 @@ function changeColor(event){
 
 let amountOfBoxes = 16;
 
-for(let i = 0; i<amountOfBoxes; i++)
-{
-    sketchBoxRowContainer = document.createElement('div');
-    sketchBoxRowContainer.classList.add('sketch-box-row-container');
-
-    for(let j = 0; j<amountOfBoxes; j++)
+function createGrid () {
+    sketchBoxContainerDiv.textContent = '';
+    for(let i = 0; i<amountOfBoxes; i++)
     {
-    sketchBox = document.createElement('div');
-    sketchBox.classList.add('sketch-box');
-    sketchBox.addEventListener('mouseover', changeColor)
+        sketchBoxRowContainer = document.createElement('div');
+        sketchBoxRowContainer.classList.add('sketch-box-row-container');
 
-    sketchBoxRowContainer.appendChild(sketchBox);
+        for(let j = 0; j<amountOfBoxes; j++)
+        {
+        sketchBox = document.createElement('div');
+        sketchBox.classList.add('sketch-box');
+        sketchBox.addEventListener('mouseover', changeColor)
+
+        sketchBoxRowContainer.appendChild(sketchBox);
+        }
+
+        sketchBoxContainerDiv.appendChild(sketchBoxRowContainer);
     }
-
-    sketchBoxContainerDiv.appendChild(sketchBoxRowContainer);
 }
 
 middleBottomContainerDiv.appendChild(sketchBoxContainerDiv);
 
+gridSlider.oninput = function () {
+    amountOfBoxes = this.value;
+    gridOutput.textContent = `${amountOfBoxes} x ${amountOfBoxes}`
+    createGrid();
+}
+
+createGrid();
