@@ -11,53 +11,41 @@ body{
 .footer-container{
     text-align: center;
     display: flex;
-    flex: 1 1 0;
 }
 
 .header-container{
     font-size: 4em;
     align-items: center;
     justify-content: center;
+    flex: 1.4;
 }
 
 .footer-container{
+    flex:1;
     font-size: 1.25em;
     margin-top: auto;
-    align-items: flex-end;
-    gap: .125em;
-    margin-bottom: .75em;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .middle-container{
+    flex:1;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     flex: 1 1 0;
+    gap: 1.2em;
 }
 
-.middle-left-container{
+.middle-top-container{
     display: flex;
     justify-content: space-evenly;
     gap: 2em;
     flex: 1;
 }
 
-.middle-left-right-container,
-.middle-left-left-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    flex: 1;
-}
-
-.middle-left-left-container{
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.middle-right-container{
-    flex: 1;
+.middle-bottom-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,8 +78,8 @@ button{
 
 #sketch-box-container-div{
     display: flex; 
-    width:500px; 
-    height: 500px;
+    width: 38em; 
+    height: 38em;
 }
 
 .sketch-box-hover{
@@ -100,29 +88,4 @@ button{
     margin-bottom: 1px; 
     border: 0.1rem solid black; 
     flex:1 1 0;
-}
-
-/*#color-picker{
-    border: none;
-    background-color: white;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-}*/
-
-input[type=color] {
-    display: inline;
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-}
-span {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px; 
-  background-color:black;
-  display:flex;
-  justify-content: center;
-  align-items: center;
 }
