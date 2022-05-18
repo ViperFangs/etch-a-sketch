@@ -71,13 +71,15 @@ button{
 
 .sketch-box{ 
     flex: 1 1 0;
+    border: 1px rgba(0,0,0,0.1) solid;
 }
 
 #sketch-box-container-div{
     display: flex; 
     width: 38em; 
     height: 38em;
-    border: 0.1em black solid;
+    padding: 0;
+    border: 1px rgba(0,0,0,0.5) solid;
 }
 
 .sketch-box-hover{
