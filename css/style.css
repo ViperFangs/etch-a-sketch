@@ -17,7 +17,7 @@ body{
     font-size: 4em;
     align-items: center;
     justify-content: center;
-    flex: 1.4;
+    flex: 1.5;
 }
 
 .footer-container{
@@ -35,7 +35,7 @@ body{
     align-items: center;
     width: 100%;
     flex: 1 1 0;
-    gap: 1.2em;
+    gap: 2em;
 }
 
 .middle-top-container{
@@ -69,9 +69,7 @@ button{
     flex:1 1 0;
 }
 
-.sketch-box{
-    margin-right: 1px; 
-    margin-bottom: 1px; 
+.sketch-box{ 
     border: 0.1rem solid black; 
     flex: 1 1 0;
 }
@@ -83,9 +81,7 @@ button{
 }
 
 .sketch-box-hover{
-    background-color: black; 
-    margin-right: 1px; 
-    margin-bottom: 1px; 
+    background-color: black;  
     border: 0.1rem solid black; 
     flex:1 1 0;
 }
