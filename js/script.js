@@ -77,6 +77,7 @@ shadeButton.addEventListener('click', buttonFunction);
 
 function buttonFunction(event){
     if(this.value == 0){
+        currentShadeColor = 0;
         this.value = 1;
         this.setAttribute('style', 'background-color: lightgreen;');
     }
