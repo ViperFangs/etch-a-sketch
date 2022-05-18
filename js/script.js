@@ -3,6 +3,7 @@ const middleBottomContainerDiv = document.querySelector('.middle-bottom-containe
 const gridOutput = document.getElementById('grid-slider-value');
 const clearButton = document.getElementById('clear-button');
 const eraseButton = document.getElementById('erase-button');
+const rainbowButton = document.getElementById('rainbow-mode-button');
 
 let gridSlider = document.getElementById('grid-slider');
 let sketchBoxRowContainer = document.createElement('div');
@@ -11,11 +12,17 @@ let sketchBox = document.createElement('div');
 sketchBoxContainerDiv.setAttribute('id', 'sketch-box-container-div');
 
 function changeColor(event){
-    if(eraseButton.value == 0){
+    if(eraseButton.value == 1){
+        this.classList.remove('sketch-box-hover');
+        this.setAttribute('style', ``);
+    }
+    else if(rainbowButton.value == 1 && eraseButton.value == 0){
         this.classList.add('sketch-box-hover');
+        this.setAttribute('style', `background-color: ${randomHexColor()}`);
     }
     else{
-        this.classList.remove('sketch-box-hover');
+        this.classList.add('sketch-box-hover');
+        this.setAttribute('style', ``);
     }
 }
 
@@ -52,16 +59,22 @@ gridSlider.oninput = function () {
 clearButton.addEventListener('click', createGrid);
 createGrid();
 
-eraseButton.addEventListener('click', tempFunction);
+eraseButton.addEventListener('click', buttonFunction);
+rainbowButton.addEventListener('click', buttonFunction);
 
-function tempFunction(event){
+function buttonFunction(event){
     if(this.value == 0){
         this.value = 1;
         this.setAttribute('style', 'background-color: lightgreen;');
     }
-    
+
     else{
         this.value = 0;
         this.setAttribute('style', 'background-color: default;');
     }
 }
+
+const randomHexColor = () => {
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    return '#' + n.slice(0, 6);
+  };
