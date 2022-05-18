@@ -1,8 +1,9 @@
 const sketchBoxContainerDiv = document.createElement('div');
 const middleBottomContainerDiv = document.querySelector('.middle-bottom-container');
-let gridSlider = document.getElementById('grid-slider');
 const gridOutput = document.getElementById('grid-slider-value');
+const clearButton = document.getElementById('clear-button');
 
+let gridSlider = document.getElementById('grid-slider');
 let sketchBoxRowContainer = document.createElement('div');
 let sketchBox = document.createElement('div');
 
@@ -41,5 +42,7 @@ gridSlider.oninput = function () {
     gridOutput.textContent = `${amountOfBoxes} x ${amountOfBoxes}`
     createGrid();
 }
+
+clearButton.addEventListener('click', createGrid);
 
 createGrid();
